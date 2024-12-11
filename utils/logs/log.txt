@@ -3696,3 +3696,326 @@ os.
 [2024-12-11 19:38:38] Proyecto Model ha recibido conexión a la base de datos
 [2024-12-11 19:38:38] FilesModel ha recibido conexión a la base de datos
 [2024-12-11 19:38:38] Solicitud recibida: Método GET, Ruta /proyecto/trimActivo
+[2024-12-11 19:55:08] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 19:55:08] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 19:55:08] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 19:55:08] Solicitud recibida: Método GET, Ruta /proyecto/metasAlcanzada
+[2024-12-11 19:58:43] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 19:58:43] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 19:58:43] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 19:58:43] Solicitud recibida: Método POST, Ruta /files/subirEvidencia
+[2024-12-11 20:06:06] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:06] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:06] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:06] Solicitud recibida: Método GET, Ruta /check-auth
+[2024-12-11 20:06:06] Ruta '/check-auth' detectada.
+[2024-12-11 20:06:07] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:07] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:07] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:07] Solicitud recibida: Método GET, Ruta /proyecto/datos
+[2024-12-11 20:06:08] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:08] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:08] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:08] Solicitud recibida: Método GET, Ruta /proyecto/variables
+[2024-12-11 20:06:08] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:08] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:08] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:08] Solicitud recibida: Método GET, Ruta /proyecto/metasProg
+[2024-12-11 20:06:08] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:08] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:08] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:08] Solicitud recibida: Método GET, Ruta /proyecto/seguimiento
+[2024-12-11 20:06:09] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:09] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:09] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:09] Solicitud recibida: Método GET, Ruta /proyecto/metasAlcanzada
+[2024-12-11 20:06:09] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:09] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:09] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:09] Solicitud recibida: Método GET, Ruta /proyecto/trimActivo
+[2024-12-11 20:06:09] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:09] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:09] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:09] Solicitud recibida: Método GET, Ruta /proyecto/trimActivo
+[2024-12-11 20:06:33] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:33] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:33] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:33] Solicitud recibida: Método GET, Ruta /check-auth
+[2024-12-11 20:06:33] Ruta '/check-auth' detectada.
+[2024-12-11 20:06:34] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:34] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:34] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:34] Solicitud recibida: Método GET, Ruta /proyecto/datos
+.
+[2024-12-11 20:06:34] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:34] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:34] Solicitud recibida: Método GET, Ruta /proyecto/variables
+[2024-12-11 20:06:34] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:34] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:34] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:34] Solicitud recibida: Método GET, Ruta /proyecto/metasAlcanzada
+[2024-12-11 20:06:34] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:34] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:34] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:34] Proyecto Model ha recibido conexión a la base de datos
+
+[2024-12-11 20:06:34] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:34] Solicitud recibida: Método GET, Ruta /proyecto/seguimiento
+[2024-12-11 20:06:35] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:35] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:35] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:35] Solicitud recibida: Método GET, Ruta /proyecto/trimActivo
+[2024-12-11 20:06:35] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:35] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:35] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:35] Solicitud recibida: Método GET, Ruta /proyecto/trimActivo
+[2024-12-11 20:06:45] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:45] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:45] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:45] Solicitud recibida: Método GET, Ruta /files/obtenerEvidenciaRuta
+[2024-12-11 20:06:52] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:52] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:52] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:52] Solicitud recibida: Método OPTIONS, Ruta /files/eliminarRuta
+[2024-12-11 20:06:52] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:52] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:52] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:52] Solicitud recibida: Método GET, Ruta /files/obtenerEvidenciaRuta
+[2024-12-11 20:06:52] Solicitud OPTIONS recibida para preflight CORS
+[2024-12-11 20:06:53] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:53] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:53] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:53] Solicitud recibida: Método DELETE, Ruta /files/eliminarRuta
+[2024-12-11 20:06:55] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:06:55] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:06:55] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:06:55] Solicitud recibida: Método GET, Ruta /cedulas_evidencias/2024/programa2/area_1/indicador1/trim_3/constancia_de_situacin_fiscal.pdf
+[2024-12-11 20:06:55] Error: Endpoint no encontrado - Ruta: /cedulas_evidencias/2024/programa2/area_1/indicador1/trim_3/constancia_de_situacin_fiscal.pdf
+[2024-12-11 20:08:22] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:08:22] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:08:22] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:08:22] Solicitud recibida: Método GET, Ruta /check-auth
+[2024-12-11 20:08:22] Ruta '/check-auth' detectada.
+[2024-12-11 20:08:23] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:08:23] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:08:23] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:08:23] Solicitud recibida: Método GET, Ruta /proyecto/datos
+[2024-12-11 20:08:23] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:08:23] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:08:23] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:08:23] Solicitud recibida: Método GET, Ruta /proyecto/variables
+[2024-12-11 20:08:24] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:08:24] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:08:24] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:08:24] Solicitud recibida: Método GET, Ruta /proyecto/metasProg
+[2024-12-11 20:08:24] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:08:24] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:08:24] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:08:24] Solicitud recibida: Método GET, Ruta /proyecto/seguimiento
+[2024-12-11 20:08:24] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:08:24] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:08:24] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:08:24] Solicitud recibida: Método GET, Ruta /proyecto/trimActivo
+[2024-12-11 20:08:24] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:08:24] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:08:24] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:08:24] Solicitud recibida: Método GET, Ruta /proyecto/metasAlcanzada
+[2024-12-11 20:08:24] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:08:24] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:08:24] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:08:24] Solicitud recibida: Método GET, Ruta /proyecto/trimActivo
+[2024-12-11 20:08:31] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:08:31] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:08:31] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:08:31] Solicitud recibida: Método GET, Ruta /files/obtenerEvidenciaRuta
+[2024-12-11 20:11:22] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:11:22] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:11:22] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:11:22] Solicitud recibida: Método GET, Ruta /check-auth
+[2024-12-11 20:11:22] Ruta '/check-auth' detectada.
+[2024-12-11 20:11:23] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:11:23] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:11:23] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:11:23] Solicitud recibida: Método GET, Ruta /proyecto/datos
+[2024-12-11 20:11:24] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:11:24] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:11:24] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:11:24] Solicitud recibida: Método GET, Ruta /proyecto/metasProg
+[2024-12-11 20:11:24] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:11:24] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:11:24] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:11:24] Solicitud recibida: Método GET, Ruta /proyecto/seguimiento
+[2024-12-11 20:11:24] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:11:24] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:11:24] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:11:24] Solicitud recibida: Método GET, Ruta /proyecto/metasAlcanzada
+[2024-12-11 20:11:24] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:11:24] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:11:24] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:11:24] Solicitud recibida: Método GET, Ruta /proyecto/trimActivo
+[2024-12-11 20:11:24] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:11:24] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:11:24] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:11:24] Solicitud recibida: Método GET, Ruta /proyecto/variables
+[2024-12-11 20:11:25] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:11:25] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:11:25] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:11:25] Solicitud recibida: Método GET, Ruta /proyecto/trimActivo
+[2024-12-11 20:11:31] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:11:31] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:11:31] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:11:31] Solicitud recibida: Método GET, Ruta /files/obtenerEvidenciaRuta
+[2024-12-11 20:14:11] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:14:11] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:14:11] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:14:11] Solicitud recibida: Método GET, Ruta /files/obtenerEvidenciaRuta
+[2024-12-11 20:14:18] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:14:18] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:14:18] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:14:18] Solicitud recibida: Método POST, Ruta /files/subirEvidencia
+[2024-12-11 20:14:27] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:14:27] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:14:27] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:14:27] Solicitud recibida: Método GET, Ruta /files/obtenerEvidenciaRuta
+[2024-12-11 20:17:30] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:17:30] Proyecto Model ha recibido conexión a la base de datos
+
+[2024-12-11 20:17:30] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:17:30] Proyecto Model ha recibido conexión a la base de datos
+Ruta
+[2024-12-11 20:17:30] Solicitud OPTIONS recibida para preflight CORS
+[2024-12-11 20:17:30] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:17:30] Solicitud recibida: Método GET, Ruta /files/obtenerEvidenciaRuta
+[2024-12-11 20:17:30] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:17:30] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:17:30] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:17:30] Solicitud recibida: Método DELETE, Ruta /files/eliminarRuta
+[2024-12-11 20:18:15] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:18:16] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:18:16] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:18:16] Solicitud recibida: Método GET, Ruta /check-auth
+[2024-12-11 20:18:16] Ruta '/check-auth' detectada.
+[2024-12-11 20:18:16] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:18:16] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:18:16] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:18:16] Solicitud recibida: Método GET, Ruta /proyecto/variables
+[2024-12-11 20:18:17] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:18:17] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:18:17] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:18:17] Solicitud recibida: Método GET, Ruta /proyecto/datos
+[2024-12-11 20:18:17] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:18:17] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:18:17] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:18:17] Solicitud recibida: Método GET, Ruta /proyecto/metasProg
+[2024-12-11 20:18:17] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:18:17] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:18:17] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:18:17] Solicitud recibida: Método GET, Ruta /proyecto/trimActivo
+[2024-12-11 20:18:17] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:18:17] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:18:17] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:18:17] Solicitud recibida: Método GET, Ruta /proyecto/metasAlcanzada
+[2024-12-11 20:18:17] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:18:17] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:18:17] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:18:17] Solicitud recibida: Método GET, Ruta /proyecto/seguimiento
+[2024-12-11 20:18:18] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:18:18] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:18:18] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:18:18] Solicitud recibida: Método GET, Ruta /proyecto/trimActivo
+[2024-12-11 20:18:38] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:18:38] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:18:38] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:18:38] Solicitud recibida: Método GET, Ruta /files/obtenerEvidenciaRuta
+[2024-12-11 20:18:40] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:18:40] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:18:40] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:18:40] Solicitud recibida: Método GET, Ruta /files/obtenerEvidenciaRuta
+[2024-12-11 20:18:48] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:18:48] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:18:48] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:18:48] Solicitud recibida: Método POST, Ruta /files/subirEvidencia
+[2024-12-11 20:18:54] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:18:54] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:18:54] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:18:54] Solicitud recibida: Método GET, Ruta /files/obtenerEvidenciaRuta
+[2024-12-11 20:19:15] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:19:15] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:19:15] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:19:15] Solicitud recibida: Método POST, Ruta /files/subirEvidencia
+[2024-12-11 20:19:22] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:19:22] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:19:22] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:19:22] Solicitud recibida: Método GET, Ruta /files/obtenerEvidenciaRuta
+[2024-12-11 20:19:38] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:19:38] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:19:38] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:19:38] Solicitud recibida: Método OPTIONS, Ruta /files/eliminarRuta
+[2024-12-11 20:19:38] Solicitud OPTIONS recibida para preflight CORS
+[2024-12-11 20:19:38] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:19:38] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:19:38] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:19:38] Solicitud recibida: Método DELETE, Ruta /files/eliminarRuta
+[2024-12-11 20:19:38] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:19:38] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:19:38] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:19:38] Solicitud recibida: Método GET, Ruta /files/obtenerEvidenciaRuta
+[2024-12-11 20:20:37] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:20:37] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:20:37] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:20:37] Solicitud recibida: Método GET, Ruta /check-auth
+[2024-12-11 20:20:37] Ruta '/check-auth' detectada.
+[2024-12-11 20:20:38] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:20:38] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:20:38] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:20:38] Solicitud recibida: Método GET, Ruta /proyecto/metasAlcanzada
+[2024-12-11 20:20:39] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:20:39] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:20:39] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:20:39] Solicitud recibida: Método GET, Ruta /proyecto/trimActivo
+[2024-12-11 20:20:39] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:20:39] Proyecto Model ha recibido conexión a la base de datos
+
+[2024-12-11 20:20:39] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:20:39] Solicitud recibida: Método GET, Ruta /proyecto/seguimiento
+[2024-12-11 20:20:39] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:20:39] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:20:39] Solicitud recibida: Método GET, Ruta /proyecto/datos
+[2024-12-11 20:20:39] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:20:39] Solicitud recibida: Método GET, Ruta /proyecto/metasProg
+[2024-12-11 20:20:39] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:20:39] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:20:39] Solicitud recibida: Método GET, Ruta /proyecto/variables
+[2024-12-11 20:20:40] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:20:40] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:20:40] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:20:40] Solicitud recibida: Método GET, Ruta /proyecto/trimActivo
+[2024-12-11 20:20:46] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:20:46] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:20:46] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:20:46] Solicitud recibida: Método GET, Ruta /files/obtenerEvidenciaRuta
+[2024-12-11 20:21:11] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:21:11] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:21:11] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:21:11] Solicitud recibida: Método POST, Ruta /files/subirEvidencia
+[2024-12-11 20:21:15] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:21:15] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:21:15] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:21:15] Solicitud recibida: Método GET, Ruta /files/obtenerEvidenciaRuta
+[2024-12-11 20:21:18] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:21:18] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:21:18] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:21:18] Solicitud recibida: Método OPTIONS, Ruta /files/eliminarRuta
+[2024-12-11 20:21:18] Solicitud OPTIONS recibida para preflight CORS
+[2024-12-11 20:21:18] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:21:18] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:21:18] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:21:18] Solicitud recibida: Método DELETE, Ruta /files/eliminarRuta
+[2024-12-11 20:21:18] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:21:18] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:21:18] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:21:18] Solicitud recibida: Método GET, Ruta /files/obtenerEvidenciaRuta
+[2024-12-11 20:21:28] UserModel inicializado con conexión a la base de datos.
+[2024-12-11 20:21:28] Proyecto Model ha recibido conexión a la base de datos
+[2024-12-11 20:21:28] FilesModel ha recibido conexión a la base de datos
+[2024-12-11 20:21:28] Solicitud recibida: Método GET, Ruta /files/obtenerEvidenciaRuta
