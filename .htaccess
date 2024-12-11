@@ -1,0 +1,33 @@
+
+Options All -Indexes
+
+
+Options -MultiViews
+
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.php [QSA,L]
+
+
+<Files ".ht*">
+    Require all denied
+</Files>
+
+
+<FilesMatch "\.(pdf|jpg|jpeg|png|gif|css|js|txt|woff|woff2|tff|eot)$">
+    Require all granted
+</FilesMatch>
+
+
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "http://localhost:4200"
+    Header set Access-Control-Allow-Credentials "true"
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "X-Requested-With, Content-Type, Accept, Authorization"
+</IfModule>
+
+
+
+
