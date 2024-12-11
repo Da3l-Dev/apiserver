@@ -1,5 +1,5 @@
 # Ignorar carpetas y archivos de logs
-/utils/
+/utils/logs/log.txt
 
 # Ignorar los archivos subidos al servidor (por ejemplo, archivos de evidencia en tu caso)
 /cedulas_evidencias/
