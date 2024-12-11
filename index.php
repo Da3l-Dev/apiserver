@@ -212,13 +212,14 @@ switch ($path) {
         break;
 
     case '/files/eliminarRuta':
-        if ($method === 'GET') {
+        if ($method === 'DELETE') {  // Cambiado de 'GET' a 'DELETE'
             $filesController->eliminarRutaArchivo($params);
         } else {
             header("HTTP/1.1 405 Method Not Allowed");
             echo json_encode(["message" => "Método no permitido"]);
         }
         break;
+        
 
     // Endpoint no encontrado
     default:

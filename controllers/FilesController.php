@@ -10,10 +10,13 @@ class FilesController {
         $this->filesModel = new FilesModel($db);
     }
 
+    /**
+     * Subir un archivo de evidencia
+     */
     public function subirEvidenciaRuta() {
         try {
             // Validar que todos los parámetros requeridos están presentes
-            $parametrosRequeridos = ['idEjercicio', 'idRamo', 'idFuenteFinan', 'idPrograma', 'idArea', 'idIndicador', 'idTrimestre'];
+            $parametrosRequeridos = ['idEjercicio', 'idPrograma', 'idArea', 'idIndicador', 'idTrimestre'];
             foreach ($parametrosRequeridos as $param) {
                 if (!isset($_POST[$param]) || empty($_POST[$param])) {
                     throw new Exception("Falta el parámetro requerido o está vacío: $param");
@@ -22,8 +25,6 @@ class FilesController {
 
             // Obtener los datos del POST
             $idEjercicio = $_POST['idEjercicio'];
-            $idRamo = $_POST['idRamo'];
-            $idFuenteFinan = $_POST['idFuenteFinan'];
             $idPrograma = $_POST['idPrograma'];
             $idArea = $_POST['idArea'];
             $idIndicador = $_POST['idIndicador'];
@@ -76,7 +77,7 @@ class FilesController {
             $rutaFiles = "/cedulas_evidencias/" . $idEjercicio . "/" . "programa" . $idPrograma . "/" . "area_" . $idArea . "/" . "indicador" . $idIndicador . "/" . "trim_" . $idTrimestre . "/" . $nombreArchivo;
 
             // Registrar o actualizar la ruta del archivo en la base de datos
-            $resultado = $this->filesModel->registrarRutaEvidencia($idEjercicio, $idRamo, $idFuenteFinan, $idPrograma, $idArea, $idIndicador, $idTrimestre, $rutaFiles);
+            $resultado = $this->filesModel->registrarRutaEvidencia($idEjercicio, null, null, $idPrograma, $idArea, $idIndicador, $idTrimestre, $rutaFiles);
 
             // Respuesta exitosa
             echo json_encode([
@@ -94,7 +95,9 @@ class FilesController {
         }
     }
     
-    // Método para sanear el nombre del archivo
+    /**
+     * Método para sanear el nombre del archivo
+     */
     private function sanitizeFileName($nombreArchivo) {
         // Reemplazar espacios por guiones bajos, solo si el archivo tiene espacios
         if (strpos($nombreArchivo, ' ') !== false) {
@@ -110,10 +113,13 @@ class FilesController {
         return $nombreArchivo;
     }
 
+    /**
+     * Obtener la ruta de la evidencia
+     */
     public function obtenerEvidenciaRuta() {
         try {
             // Validar parámetros requeridos
-            $parametrosRequeridos = ['idEjercicio', 'idRamo', 'idFuenteFinan', 'idPrograma', 'idArea', 'idIndicador', 'idTrimestre'];
+            $parametrosRequeridos = ['idEjercicio', 'idPrograma', 'idArea', 'idIndicador', 'idTrimestre'];
             foreach ($parametrosRequeridos as $param) {
                 if (!isset($_GET[$param]) || empty($_GET[$param])) {
                     throw new Exception("Falta el parámetro requerido o está vacío: $param");
@@ -122,15 +128,13 @@ class FilesController {
 
             // Obtener parámetros
             $idEjercicio = $_GET['idEjercicio'];
-            $idRamo = $_GET['idRamo'];
-            $idFuenteFinan = $_GET['idFuenteFinan'];
             $idPrograma = $_GET['idPrograma'];
             $idArea = $_GET['idArea'];
             $idIndicador = $_GET['idIndicador'];
             $idTrimestre = $_GET['idTrimestre'];
 
             // Obtener la ruta del archivo
-            $rutaRelativa = $this->filesModel->obtenerRutaEvidencia($idEjercicio, $idRamo, $idFuenteFinan, $idPrograma, $idArea, $idIndicador, $idTrimestre);
+            $rutaRelativa = $this->filesModel->obtenerRutaEvidencia($idEjercicio, $idPrograma, $idArea, $idIndicador, $idTrimestre);
 
             if (!$rutaRelativa) {
                 throw new Exception('No se encontró la evidencia para el trimestre solicitado.');
@@ -151,32 +155,54 @@ class FilesController {
         }
     }
 
+    /**
+     * Eliminar la ruta del archivo
+     */
     public function eliminarRutaArchivo() {
         try {
             // Definir los parámetros requeridos
-            $parametrosRequeridos = ['idEjercicio', 'idIndicador', 'idArea', 'idPrograma', 'idTrimestre'];
-    
+            $parametrosRequeridos = ['idEjercicio', 'idPrograma', 'idArea', 'idIndicador', 'idTrimestre'];
+
             // Verificar si todos los parámetros existen y no están vacíos
             foreach ($parametrosRequeridos as $param) {
                 if (!isset($_GET[$param]) || empty($_GET[$param])) {
                     throw new Exception("Falta el parámetro requerido o está vacío: $param");
                 }
             }
-    
+
             // Obtener los parámetros
             $idEjercicio = $_GET['idEjercicio'];
-            $idIndicador = $_GET['idIndicador'];
-            $idArea = $_GET['idArea'];
             $idPrograma = $_GET['idPrograma'];
+            $idArea = $_GET['idArea'];
+            $idIndicador = $_GET['idIndicador'];
             $idTrimestre = $_GET['idTrimestre'];
-    
-            // Llamar al método eliminarRutaEvidencia pasando los parámetros correctos
-            $this->filesModel->eliminarRutaEvidencia($idEjercicio, $idIndicador, $idArea, $idPrograma, $idTrimestre);
-    
+
+            // Obtener la ruta relativa del archivo desde la base de datos
+            $rutaRelativa = $this->filesModel->obtenerRutaEvidencia($idEjercicio, $idPrograma, $idArea, $idIndicador, $idTrimestre);
+
+            if (!$rutaRelativa) {
+                throw new Exception('No se encontró la evidencia para el trimestre solicitado.');
+            }
+
+            // Eliminar el archivo físico en el servidor
+            $rutaCompleta = __DIR__ . "/..". $rutaRelativa;
+
+            // Verificar si el archivo existe antes de intentar eliminarlo
+            if (file_exists($rutaCompleta)) {
+                if (!unlink($rutaCompleta)) {
+                    throw new Exception('No se pudo eliminar el archivo del servidor.');
+                }
+            } else {
+                throw new Exception('El archivo no existe en el servidor.');
+            }
+
+            // Llamar al método eliminarRutaEvidencia pasando los parámetros correctos para eliminar la ruta en la base de datos
+            $this->filesModel->eliminarRutaEvidencia($idEjercicio, $idPrograma, $idArea, $idIndicador, $idTrimestre);
+
             // Enviar respuesta de éxito
             echo json_encode([
                 "success" => true,
-                "message" => "Ruta de evidencia eliminada con éxito."
+                "message" => "Ruta de evidencia y archivo eliminados con éxito."
             ]);
         } catch (Exception $e) {
             // Manejar errores
@@ -186,5 +212,5 @@ class FilesController {
                 "message" => $e->getMessage()
             ]);
         }
-    }    
+    }
 }
