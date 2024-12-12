@@ -1,5 +1,5 @@
 <?php
-class FilesModel {
+class FilesCedulaModel {
     private $pdo;
 
     public function __construct($db) {
@@ -63,5 +63,40 @@ class FilesModel {
         
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$idEjercicio, $idPrograma, $idArea, $idIndicador, $idTrimestre]);
+    }
+
+
+    public function registrarRutaMir($idEjercicio, $idRamo, $idFuenteFinan, $idPrograma, $idArea, $idTrimestre, $rutaFiles){
+
+        if ($this->verificarRegistroMir($idEjercicio, $idRamo, $idFuenteFinan, $idPrograma, $idArea, $idTrimestre)) {
+            // Actualizar registro existente
+            $sqlUpdate = "UPDATE rutafilesmir 
+                          SET rutaFiles = ? 
+                          WHERE idEjercicio = ? 
+                          AND idRamo = ? 
+                          AND idFuenteFinan = ?
+                          AND idPrograma = ? 
+                          AND idArea = ? 
+                          AND idTrimestre = ?";
+            $stmtUpdate = $this->pdo->prepare($sqlUpdate);
+            $stmtUpdate->execute([$idEjercicio, $idRamo, $idFuenteFinan, $idPrograma, $idArea, $idTrimestre, $rutaFiles]);
+            return "MIR actualizado exitosamente.";
+        } else {
+            // Insertar nuevo registro
+            $sqlInsert = "INSERT INTO rutafiles (idEjercicio, idRamo, idFuenteFinan, idPrograma, idArea, idTrimestre, rutaFiles) 
+                          VALUES (?, ?, ?, ?, ?, ?, ?)";
+            $stmtInsert = $this->pdo->prepare($sqlInsert);
+            $stmtInsert->execute([$idEjercicio, $idRamo, $idFuenteFinan, $idPrograma, $idArea, $idTrimestre, $rutaFiles]);
+            return "MIR insertado exitosamente.";
+        }
+    }
+
+    public function verificarRegistroMir($idEjercicio, $idRamo, $idFuenteFinan, $idPrograma, $idArea, $idTrimestre) {
+        $sql = "SELECT COUNT(*) as count FROM rutafilesmir 
+                WHERE idEjercicio = ? AND idRamo = ? AND idFuenteFinan = ? AND idPrograma = ? AND idArea = ? AND idTrimestre = ?";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$idEjercicio, $idRamo, $idFuenteFinan, $idPrograma, $idArea, $idTrimestre]);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        return $result['count'] > 0;
     }
 }

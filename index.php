@@ -8,13 +8,13 @@ session_start();
 include 'db/conexion.php';
 include 'controllers/UserController.php';
 include 'controllers/ProyectoController.php';
-include 'controllers/FilesController.php';
+include 'controllers/FilesCedulaController.php';
 
 // Inicializa la conexion a la base de datos y les asigna esta conexion a los modelos
 $pdo = new conexion();
 $userController = new UserController($pdo);
 $proyectoController = new ProyectoController($pdo);
-$filesController = new FilesController($pdo);
+$filesController = new FilesCedulaController($pdo);
 
 // Log del método de solicitud y URL solicitada
 $method = $_SERVER['REQUEST_METHOD'];

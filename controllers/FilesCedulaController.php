@@ -1,13 +1,13 @@
 <?php
 
 include_once __DIR__ . '/../utils/logger.php';
-include_once 'models/FilesModel.php';
+include_once 'models/FilesCedulaModel.php';
 
-class FilesController {
+class FilesCedulaController {
     private $filesModel;
 
     public function __construct($db) {
-        $this->filesModel = new FilesModel($db);
+        $this->filesModel = new FilesCedulaModel($db);
     }
 
     /**
