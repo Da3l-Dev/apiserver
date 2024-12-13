@@ -9,12 +9,14 @@ include 'db/conexion.php';
 include 'controllers/UserController.php';
 include 'controllers/ProyectoController.php';
 include 'controllers/FilesCedulaController.php';
+include 'controllers/FilesMirController.php';
 
 // Inicializa la conexion a la base de datos y les asigna esta conexion a los modelos
 $pdo = new conexion();
 $userController = new UserController($pdo);
 $proyectoController = new ProyectoController($pdo);
 $filesController = new FilesCedulaController($pdo);
+$filesMirController = new FilesMirController($pdo);
 
 // Log del método de solicitud y URL solicitada
 $method = $_SERVER['REQUEST_METHOD'];
@@ -214,6 +216,15 @@ switch ($path) {
     case '/files/eliminarRuta':
         if ($method === 'DELETE') {  // Cambiado de 'GET' a 'DELETE'
             $filesController->eliminarRutaArchivo($params);
+        } else {
+            header("HTTP/1.1 405 Method Not Allowed");
+            echo json_encode(["message" => "Método no permitido"]);
+        }
+        break;
+    
+    case '/files/subirMir':
+        if ($method === 'POST') {
+            $filesMirController->subirMirEvidencia($params);
         } else {
             header("HTTP/1.1 405 Method Not Allowed");
             echo json_encode(["message" => "Método no permitido"]);
