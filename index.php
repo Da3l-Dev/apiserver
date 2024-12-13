@@ -230,6 +230,16 @@ switch ($path) {
             echo json_encode(["message" => "Método no permitido"]);
         }
         break;
+
+    case '/files/rutasMir':
+        if ($method === 'GET' && isset($_GET['idArea'])) {
+            $idArea = intval($_GET['idArea']);
+            $filesMirController->obtenerMirArea($idArea);
+        } else {
+            header("HTTP/1.1 400 Bad Request");
+            echo json_encode(["message" => "Faltan parámetros idArea"]);
+        }
+        break;
         
 
     // Endpoint no encontrado

@@ -46,4 +46,15 @@ class FilesMirModel {
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result['count'] > 0;
     }
+
+    // Obtener todas las rutas asociadas al area
+    public function obtenerMirFirmadas($idArea){
+        $sql = "SELECT rutaFiles, idTrimestre as trim FROM rutafilesmir WHERE idArea = ? ORDER BY idTrimestre";
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$idArea]);
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $result;
+    }
 }

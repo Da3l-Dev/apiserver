@@ -95,4 +95,22 @@ class FilesMirController {
         $nombreArchivo = preg_replace('/[^a-zA-Z0-9\._-]/', '', str_replace(' ', '_', $nombreArchivo));
         return strtolower($nombreArchivo);
     }
+
+
+    public function obtenerMirArea($idArea){
+        $rutas = $this->filesMirModel->obtenerMirFirmadas($idArea);
+
+        if($rutas){
+            echo json_encode([
+                "status" => "success",
+                "data" => $rutas
+            ]);
+        } else {
+            header("HTTP/1.1 404 Not Found");
+            echo json_encode([
+                "status" => "error",
+                "message" => "No existen mir subidas"
+            ]);
+        }
+    }
 }
