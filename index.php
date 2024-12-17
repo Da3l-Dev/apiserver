@@ -10,6 +10,7 @@ include 'controllers/UserController.php';
 include 'controllers/ProyectoController.php';
 include 'controllers/FilesCedulaController.php';
 include 'controllers/FilesMirController.php';
+include 'controllers/FirmasController.php';
 
 // Inicializa la conexion a la base de datos y les asigna esta conexion a los modelos
 $pdo = new conexion();
@@ -17,6 +18,7 @@ $userController = new UserController($pdo);
 $proyectoController = new ProyectoController($pdo);
 $filesController = new FilesCedulaController($pdo);
 $filesMirController = new FilesMirController($pdo);
+$firmasController = new FirmasController($pdo);
 
 // Log del método de solicitud y URL solicitada
 $method = $_SERVER['REQUEST_METHOD'];
@@ -240,7 +242,43 @@ switch ($path) {
             echo json_encode(["message" => "Faltan parámetros idArea"]);
         }
         break;
-        
+
+    case '/firmas/obtenerFirmas':
+        if ($method === 'GET' && isset($_GET['idProyecto'])) {
+            $idProyecto = intval($_GET['idProyecto']);
+            $firmasController->obtenerFirmas($idProyecto);
+        } else {
+            header("HTTP/1.1 400 Bad Request");
+            echo json_encode(["message" => "Faltan parámetros idArea"]);
+        }
+        break;
+
+    case '/firmas/agregarFirma':
+        if ($method === 'POST') {
+            $firmasController->registrarFirmaProyecto($params);
+        } else {
+            header("HTTP/1.1 405 Method Not Allowed");
+            echo json_encode(["message" => "Método no permitido"]);
+        }
+        break;
+
+    case '/firmas/editarFirma':
+        if ($method === 'POST') {
+            $firmasController->editarFirmaProyecto($params);
+        } else {
+            header("HTTP/1.1 405 Method Not Allowed");
+            echo json_encode(["message" => "Método no permitido"]);
+        }
+        break;
+    
+    case '/firmas/eliminarFirma':
+        if ($method === 'DELETE') {  // Cambiado de 'GET' a 'DELETE'
+            $firmasController->eliminarFirmaProyecto($params);
+        } else {
+            header("HTTP/1.1 405 Method Not Allowed");
+            echo json_encode(["message" => "Método no permitido"]);
+        }
+        break;
 
     // Endpoint no encontrado
     default:
