@@ -280,6 +280,16 @@ switch ($path) {
         }
         break;
 
+    case '/firmas/obtenerCargo':
+        if ($method === 'GET') {  // Verifica que el método sea GET
+            $firmasController->obtenerCatCargos();
+        } else {
+            header("HTTP/1.1 405 Method Not Allowed");
+            echo json_encode(["message" => "Método no permitido"]);
+        }
+        break;
+
+            
     // Endpoint no encontrado
     default:
         customLog("Error: Endpoint no encontrado - Ruta: $path");

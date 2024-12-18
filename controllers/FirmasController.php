@@ -212,5 +212,34 @@ class FirmasController{
                 "message" => $e->getMessage()
             ]);
         }
+    }
+
+
+    public function obtenerCatCargos() {
+        try {
+            // Llamar al modelo para obtener los cargos
+            $cargos = $this->firmaModel->obtenerCatCargos();
+    
+            if ($cargos) {
+                echo json_encode([
+                    "status" => "success",
+                    "data" => $cargos
+                ]);
+            } else {
+                header("HTTP/1.1 404 Not Found");
+                echo json_encode([
+                    "status" => "error",
+                    "message" => "No se encontraron cargos disponibles."
+                ]);
+            }
+        } catch (Exception $e) {
+            // Manejo de errores
+            header("HTTP/1.1 500 Internal Server Error");
+            echo json_encode([
+                "status" => "error",
+                "message" => $e->getMessage()
+            ]);
+        }
     }    
+
 }

@@ -144,5 +144,22 @@ class FirmasModel{
     }
     
 
+    public function obtenerCatCargos() {
+        try {
 
+            $sql = "SELECT * FROM catcargos";
+            $stmt = $this->pdo->prepare($sql); // Asumiendo que $this->db es una instancia de PDO
+    
+            $stmt->execute();
+    
+            $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+            return $resultados;
+    
+        } catch (PDOException $e) {
+            error_log("Error en obtenerCatCargos: " . $e->getMessage());
+            return [];
+        }
+    }
+    
 }
