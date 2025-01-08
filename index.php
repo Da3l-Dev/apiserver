@@ -195,6 +195,17 @@ switch ($path) {
             echo json_encode(["message" => "Faltan parámetros"]);
         }
         break;
+    
+    case '/proyecto/mir':
+        if ($method === 'GET' && isset($_GET['idArea'])) {
+            $idArea = intval($_GET['idArea']);
+            $proyectoController->obtenerMir($idArea);
+        } else {
+            header("HTTP/1.1 400 Bad Request");
+            echo json_encode(["message" => "Faltan parámetros idArea"]);
+        }
+        break;
+    
 
     // Rutas de archivos
     case '/files/subirEvidencia':

@@ -347,4 +347,36 @@ class ProyectoModel {
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);   
     }
+
+    public function obtenerMir($idArea) {
+        try {
+            // Preparar la consulta SQL
+            $stmt = $this->pdo->prepare("SELECT numCA, RN, Indicador, MV, supuestos, formula, cUniMedible, cUniMedida, cDimension, cSentidoIndicador, cMeta, cFreMed, idNivelIndicador, m1_p, m2_p, m3_p, m4_p, ma_p, MetaAlcanzadaTrim1, MetaAlcanzadaTrim2, MetaAlcanzadaTrim3, MetaAlcanzadaTrim4, Cuausa1, Cuausa2, Cuausa3, Cuausa4, Efecto1, Efecto2, Efecto3, Efecto4 
+            FROM mir_uno LEFT JOIN 
+            metaprogramada 
+            ON mir_uno.idArea = metaprogramada.idArea 
+            AND mir_uno.idPrograma = metaprogramada.idPrograma 
+            AND mir_uno.idIndicador = metaprogramada.idIndicador 
+            LEFT JOIN logrosAlcanzados 
+            ON mir_uno.idArea = logrosAlcanzados.idArea 
+            AND mir_uno.idIndicador = logrosAlcanzados.idIndicador WHERE mir_uno.idArea = :idArea ORDER BY mir_uno.numCA");
+    
+            // Enlazar el parámetro
+            $stmt->bindParam(':idArea', $idArea, PDO::PARAM_INT);
+    
+            // Ejecutar la consulta
+            $stmt->execute();
+    
+            // Obtener los resultados
+            $resultados = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+            // Devolver los resultados
+            return $resultados;
+    
+        } catch (PDOException $e) {
+            // Manejo de errores
+            echo "Error al obtener la MIR: " . $e->getMessage();
+            return [];
+        }
+    }    
 }

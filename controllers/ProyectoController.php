@@ -227,4 +227,21 @@ class ProyectoController{
             ]);
         }
     }
+
+    public function obtenerMir($idArea) {
+        $mirData = $this->proyectoModel->obtenerMir($idArea);
+    
+        if ($mirData) {
+            echo json_encode([
+                "status" => "success",
+                "data" => $mirData
+            ]);
+        } else {
+            header("HTTP/1.1 404 Not Found");
+            echo json_encode([
+                "status" => "error",
+                "message" => "No se encontraron datos de la MIR"
+            ]);
+        }
+    }    
 }
