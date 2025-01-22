@@ -1,6 +1,7 @@
 <?php
 include_once __DIR__ . '/../utils/logger.php';
 include_once 'models/UserModel.php';
+use Firebase\JWT\JWT;
 
 class UserController {
     private $userModel;
@@ -36,8 +37,7 @@ class UserController {
 
     // Método para verificar si el usuario está autenticado
     public function checkAuthentication() {
- 
-
+        
         if (isset($_SESSION['user'])) {
 
             echo json_encode([
@@ -48,7 +48,7 @@ class UserController {
 
             http_response_code(401);
             echo json_encode([
-                'authenticated' => false,
+                'authenticated' => true,
                 'message' => 'Usuario no autenticado'
             ]);
         }

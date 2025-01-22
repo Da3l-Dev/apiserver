@@ -357,9 +357,9 @@ class ProyectoModel {
             ON mir_uno.idArea = metaprogramada.idArea 
             AND mir_uno.idPrograma = metaprogramada.idPrograma 
             AND mir_uno.idIndicador = metaprogramada.idIndicador 
-            LEFT JOIN logrosAlcanzados 
-            ON mir_uno.idArea = logrosAlcanzados.idArea 
-            AND mir_uno.idIndicador = logrosAlcanzados.idIndicador WHERE mir_uno.idArea = :idArea ORDER BY mir_uno.numCA");
+            LEFT JOIN logrosalcanzados 
+            ON mir_uno.idArea = logrosalcanzados.idArea 
+            AND mir_uno.idIndicador = logrosalcanzados.idIndicador WHERE mir_uno.idArea = :idArea ORDER BY mir_uno.numCA");
     
             // Enlazar el parámetro
             $stmt->bindParam(':idArea', $idArea, PDO::PARAM_INT);

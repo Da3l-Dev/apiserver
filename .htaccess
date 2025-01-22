@@ -1,26 +1,30 @@
-
+# Deshabilitar listado de directorios
 Options All -Indexes
 
-
+# Desactivar MultiViews
 Options -MultiViews
 
-
+# Rutas amigables
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
 
-
+# Proteger archivos .ht*
 <Files ".ht*">
     Require all denied
 </Files>
 
-
+# Permitir acceso a archivos estáticos
 <FilesMatch "\.(pdf|jpg|jpeg|png|gif|css|js|txt|woff|woff2|tff|eot)$">
     Require all granted
 </FilesMatch>
 
+# Restringir acceso a archivos sensibles
+<FilesMatch "\.(sql|env|ini|log)$">
+    Require all denied
+</FilesMatch>
 
-
+# Configurar CORS
 <IfModule mod_headers.c>
     Header set Access-Control-Allow-Origin "http://localhost:4200"
     Header set Access-Control-Allow-Credentials "true"
@@ -28,6 +32,10 @@ RewriteRule ^ index.php [QSA,L]
     Header set Access-Control-Allow-Headers "X-Requested-With, Content-Type, Accept, Authorization"
 </IfModule>
 
+# Compresión de archivos
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
 
-
-
+# Asegurar codificación UTF-8
+AddDefaultCharset UTF-8
