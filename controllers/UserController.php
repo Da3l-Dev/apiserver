@@ -48,7 +48,7 @@ class UserController {
 
             http_response_code(401);
             echo json_encode([
-                'authenticated' => true,
+                'authenticated' => false,
                 'message' => 'Usuario no autenticado'
             ]);
         }
