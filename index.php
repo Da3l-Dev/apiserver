@@ -1,3 +1,5 @@
+
+
 <?php
 /**
  * Este código contiene los endpoints para obtener los datos desde la API
@@ -21,13 +23,16 @@ $filesMirController = new FilesMirController($pdo);
 $firmasController = new FirmasController($pdo);
 
 // Log del método de solicitud y URL solicitada
+
 $method = $_SERVER['REQUEST_METHOD'];
 $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
 customLog("Solicitud recibida: Método $method, Ruta $path");
 
 // Obtener y logear el cuerpo de la solicitud
 $json = file_get_contents('php://input');
 $params = json_decode($json, true);
+
 
 // Configuración de CORS específica para permitir solo el origen del frontend en desarrollo
 header('Access-Control-Allow-Origin: http://localhost:4200');  // Especificar el origen permitido
@@ -43,11 +48,11 @@ if ($method === 'OPTIONS') {
     exit();  // Responde con éxito sin procesar más
 }
 
-// Manejador de las peticiones del servidor
+
 switch ($path) {
 
     // Ruta para obtener todos los usuarios
-    case '/user/all':
+    case 'api/user/all':
         customLog("Ruta '/user/all' detectada.");
         if ($method === 'GET') {
             $userController->getAllUsers();
