@@ -13,6 +13,7 @@ include 'controllers/ProyectoController.php';
 include 'controllers/FilesCedulaController.php';
 include 'controllers/FilesMirController.php';
 include 'controllers/FirmasController.php';
+include 'controllers/AdminController.php';
 
 // Inicializa la conexion a la base de datos y les asigna esta conexion a los modelos
 $pdo = new conexion();
@@ -21,6 +22,7 @@ $proyectoController = new ProyectoController($pdo);
 $filesController = new FilesCedulaController($pdo);
 $filesMirController = new FilesMirController($pdo);
 $firmasController = new FirmasController($pdo);
+$adminController = new AdminController($pdo);
 
 // Log del método de solicitud y URL solicitada
 
@@ -304,6 +306,41 @@ switch ($path) {
             echo json_encode(["message" => "Método no permitido"]);
         }
         break;
+    case '/admin/obtenerAreas':
+        if ($method === 'GET') {  // Verifica que el método sea GET
+            $adminController->obtenerAreas();
+        } else {
+            header("HTTP/1.1 405 Method Not Allowed");
+            echo json_encode(["message" => "Método no permitido"]);
+        }
+        break;
+    
+        case '/admin/obtenerLogro':
+            if ($method === 'GET') {  // Verifica que el método sea GET
+                // Obtener el parámetro idArea de la URL
+                $idArea = $_GET['idArea'] ?? null;
+        
+                // Validar que el parámetro idArea esté presente y sea un número válido
+                if ($idArea === null || !is_numeric($idArea)) {
+                    header("HTTP/1.1 400 Bad Request");
+                    echo json_encode([
+                        "status" => "error",
+                        "message" => "El parámetro idArea es requerido y debe ser un número válido."
+                    ]);
+                    break;
+                }
+        
+                // Llamar al método del controlador y pasar el idArea
+                $adminController->obtenerLogroAreas($idArea);
+            } else {
+                header("HTTP/1.1 405 Method Not Allowed");
+                echo json_encode([
+                    "status" => "error",
+                    "message" => "Método no permitido"
+                ]);
+            }
+            break;
+    
 
             
     // Endpoint no encontrado
