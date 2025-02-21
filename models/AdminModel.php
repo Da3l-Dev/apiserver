@@ -17,10 +17,20 @@ class AdminModel{
     }
 
 
+    // Obtener Logros con datos vitales
+
     public function obtenerLogros($idArea) {
         try {
             // Definir la consulta SQL
-            $sql = "SELECT * FROM logros WHERE idArea = :idArea;";
+             $sql = "SELECT logros.*, ficha.idComponente, ficha.idActividad, ficha.numCA 
+                    FROM logros 
+                    JOIN (
+                        SELECT idIndicador, idComponente, idActividad, numCA 
+                        FROM fichatecnica 
+                        WHERE idArea = :idArea 
+                        GROUP BY idIndicador 
+                    ) AS ficha ON ficha.idIndicador = logros.idIndicador 
+                    WHERE logros.idArea = :idArea;";
     
             // Preparar la consulta
             $stmt = $this->pdo->prepare($sql);
