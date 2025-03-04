@@ -154,7 +154,7 @@ class ProyectoModel {
             FROM 
                 fichatecnica ft
             LEFT JOIN 
-                seguimientoadmin sa 
+                seguimientoAdmin sa 
                 ON ft.idArea = sa.idArea 
                 AND ft.idIndicador = sa.idIndicador
             WHERE 
@@ -163,7 +163,6 @@ class ProyectoModel {
 
         $stmt->bindParam(':idArea', $idArea, PDO::PARAM_INT);
 
-        
          $stmt->execute();
         
          return $stmt->fetchAll(PDO::FETCH_ASSOC);    
@@ -357,9 +356,9 @@ class ProyectoModel {
             ON mir_uno.idArea = metaprogramada.idArea 
             AND mir_uno.idPrograma = metaprogramada.idPrograma 
             AND mir_uno.idIndicador = metaprogramada.idIndicador 
-            LEFT JOIN logrosalcanzados 
-            ON mir_uno.idArea = logrosalcanzados.idArea 
-            AND mir_uno.idIndicador = logrosalcanzados.idIndicador WHERE mir_uno.idArea = :idArea ORDER BY mir_uno.numCA");
+            LEFT JOIN logrosAlcanzados 
+            ON mir_uno.idArea = logrosAlcanzados.idArea 
+            AND mir_uno.idIndicador = logrosAlcanzados.idIndicador WHERE mir_uno.idArea = :idArea ORDER BY mir_uno.numCA");
     
             // Enlazar el parámetro
             $stmt->bindParam(':idArea', $idArea, PDO::PARAM_INT);

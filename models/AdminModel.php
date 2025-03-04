@@ -52,5 +52,30 @@ class AdminModel{
             return false; // Retornar false en caso de error
         }
     }
+
+
+    // Obtencion de el seguimineto del admin por el area y año
+    public function obtenerSeguimientoAreas($idArea, $year){
+        
+        try{
+            $stmt = $this->pdo->prepare("
+                SELECT * FROM seguimientoAdmin WHERE idArea = :idArea AND idEjercicio = :year;
+            ");
+
+            $stmt->bindParam(':idArea', $idArea, PDO::PARAM_INT);
+            $stmt->bindParam(':year', $year, PDO::PARAM_INT);
+            
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        } catch(PDOException $e){
+            // Loguear el error (opcional)
+            error_log("Error en obtenerLogros: " . $e->getMessage());
+            return false; 
+        }
+        
+    }
+    
 }
 ?>

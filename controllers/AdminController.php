@@ -64,5 +64,30 @@ class AdminController{
         }
     }
 
+    public function obtenerSeguimiento($idArea, $year){
+        try{
+            $seguimiento = $this->adminModel->obtenerSeguimientoAreas($idArea, $year);
+            
+            // Verificar si se obtuvieron datos
+            if ($seguimiento) {
+                // Devolver una respuesta exitosa
+                header("HTTP/1.1 200 OK");
+                echo json_encode([
+                    "status" => "success",
+                    "data" => $seguimiento
+                ]);
+            } else {
+                // Devolver un error 404 si no se encontraron datos
+                header("HTTP/1.1 404 Not Found");
+                echo json_encode([
+                    "status" => "error",
+                    "message" => "No se encontraron logros para el área especificada."
+                ]);
+            }
+        }catch(Exception $e){
+
+        }
+    }
+
 }
 ?>

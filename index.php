@@ -107,7 +107,7 @@ switch ($path) {
         break;
 
     // Rutas del proyecto
-    case '/proyecto/datos':
+    case '/apiserver/proyecto/datos':
         if ($method === 'GET' && isset($_GET['idArea']) && isset($_GET['Year'])) {
             $idArea = intval($_GET['idArea']);
             $Year = intval($_GET['Year']);
@@ -150,7 +150,7 @@ switch ($path) {
         }
         break;
 
-    case '/proyecto/seguimiento':
+    case '/apiserver/proyecto/seguimiento':
         if ($method === 'GET' && isset($_GET['idArea'])) {
             $idArea = intval($_GET['idArea']);
             $proyectoController->obtenerSeguimiento($idArea);
@@ -170,7 +170,7 @@ switch ($path) {
         }
         break;
 
-    case '/proyecto/logros':
+    case '/apiserver/proyecto/logros':
         if ($method === 'GET' && isset($_GET['idEjercicio']) && isset($_GET['idArea']) && isset($_GET['idTrim']) && isset($_GET['idIndicador'])) {
             $idEjercicio = intval($_GET['idEjercicio']);
             $idArea = intval($_GET['idArea']);
@@ -306,7 +306,7 @@ switch ($path) {
             echo json_encode(["message" => "Método no permitido"]);
         }
         break;
-    case '/admin/obtenerAreas':
+    case '/apiserver/admin/obtenerAreas':
         if ($method === 'GET') {  // Verifica que el método sea GET
             $adminController->obtenerAreas();
         } else {
@@ -315,7 +315,7 @@ switch ($path) {
         }
         break;
     
-        case '/admin/obtenerLogro':
+        case '/apiserver/admin/obtenerLogro':
             if ($method === 'GET') {  // Verifica que el método sea GET
                 // Obtener el parámetro idArea de la URL
                 $idArea = $_GET['idArea'] ?? null;
@@ -339,6 +339,15 @@ switch ($path) {
                     "message" => "Método no permitido"
                 ]);
             }
+            break;
+        
+            case '/apiserver/admin/obtenerDataSeguimiento':
+                if($method === 'GET'){
+                    $idArea = intval($_GET['idArea']);
+                    $year = intval($_GET['year']);
+
+                    $adminController->obtenerSeguimiento($idArea, $year);
+                }
             break;
     
 
