@@ -154,7 +154,7 @@ class ProyectoModel {
             FROM 
                 fichatecnica ft
             LEFT JOIN 
-                seguimientoAdmin sa 
+                seguimientoadmin sa 
                 ON ft.idArea = sa.idArea 
                 AND ft.idIndicador = sa.idIndicador
             WHERE 

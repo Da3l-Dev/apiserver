@@ -22,13 +22,13 @@ class AdminModel{
     public function obtenerLogros($idArea) {
         try {
             // Definir la consulta SQL
-             $sql = "SELECT logros.*, ficha.idComponente, ficha.idActividad, ficha.numCA 
+            $sql = "SELECT logros.*, ficha.idComponente, ficha.idActividad, ficha.numCA 
                     FROM logros 
                     JOIN (
                         SELECT idIndicador, idComponente, idActividad, numCA 
                         FROM fichatecnica 
                         WHERE idArea = :idArea 
-                        GROUP BY idIndicador 
+                        GROUP BY idIndicador, idComponente, idActividad, numCA 
                     ) AS ficha ON ficha.idIndicador = logros.idIndicador 
                     WHERE logros.idArea = :idArea;";
     
@@ -59,7 +59,7 @@ class AdminModel{
         
         try{
             $stmt = $this->pdo->prepare("
-                SELECT * FROM seguimientoAdmin WHERE idArea = :idArea AND idEjercicio = :year;
+                SELECT * FROM seguimientoadmin WHERE idArea = :idArea AND idEjercicio = :year;
             ");
 
             $stmt->bindParam(':idArea', $idArea, PDO::PARAM_INT);
