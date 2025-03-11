@@ -25,10 +25,10 @@ class AdminModel{
             $sql = "SELECT logros.*, ficha.idComponente, ficha.idActividad, ficha.numCA 
                     FROM logros 
                     JOIN (
-                        SELECT idIndicador, idComponente, idActividad, numCA 
+                        SELECT idIndicador, MAX(idComponente) AS idComponente, MAX(idActividad) AS idActividad, MAX(numCA) AS numCA 
                         FROM fichatecnica 
                         WHERE idArea = :idArea 
-                        GROUP BY idIndicador, idComponente, idActividad, numCA 
+                        GROUP BY idIndicador 
                     ) AS ficha ON ficha.idIndicador = logros.idIndicador 
                     WHERE logros.idArea = :idArea;";
     
