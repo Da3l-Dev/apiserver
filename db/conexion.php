@@ -6,8 +6,8 @@ include_once __DIR__ . '/../utils/logger.php';
 class Conexion extends PDO {
     private $host = 'localhost';
     private $db_name = 'cockersy_sieva31';
-    private $username = 'cockersy_seph';
-    private $password = 'sep29zsKL&&38$';
+    private $username = 'dael';
+    private $password = 'Da3lox#2022';
 
     public function __construct() {
         try {
